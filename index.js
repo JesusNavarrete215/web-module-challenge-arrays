@@ -2,7 +2,7 @@
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
-    "Banana Nut Fudge",
+   "Banana Nut Fudge",
     "Black Walnut",
     "Burgundy Cherry",
     "Butterscotch Ribbon",
@@ -104,8 +104,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array){
    /*your code here*/
+   array.pop();
+   return array;
 }
 
 
@@ -144,7 +146,14 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array,flavor){
     /*your code here*/
-    
+    for (let i=0;i<array.length;i++){
+        //if the index contians the string
+        if(array[i].includes(flavor)){
+            //push that index to the new array
+            array.splice(i,1);
+        }
+    }
+    return array;
 }
 
 
